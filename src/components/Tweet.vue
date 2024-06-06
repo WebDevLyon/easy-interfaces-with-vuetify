@@ -63,7 +63,7 @@ const fetchArticles = async (page = 1, pageSize = 10) => {
 }
 
 const onLoadArticles = async ({ done }) => {
-    if (articles.value.length >= totalNumberOfArticles.value && totalNumberOfArticles > 0) {
+    if (articles.value.length >= totalNumberOfArticles.value && totalNumberOfArticles.value > 0) {
         done("empty")
         return
     }
